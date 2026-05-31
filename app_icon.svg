@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f0eeff"/>
+      <stop offset="100%" stop-color="#e2d9ff"/>
+    </linearGradient>
+    <clipPath id="rounded">
+      <rect width="1024" height="1024" rx="230" ry="230"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1024" height="1024" rx="230" ry="230" fill="url(#bg)"/>
+
+  <g clip-path="url(#rounded)">
+    <!-- Q ring: 4 colored arcs via stroke-dasharray on r=256, circumference≈1608 → 4×402 -->
+    <!-- cx=512, cy=480 -->
+    <circle cx="512" cy="480" r="256" fill="none" stroke="#ff6b8a" stroke-width="112"
+      stroke-dasharray="402 1206" stroke-dashoffset="0" stroke-linecap="butt"/>
+    <circle cx="512" cy="480" r="256" fill="none" stroke="#f5c842" stroke-width="112"
+      stroke-dasharray="402 1206" stroke-dashoffset="-402" stroke-linecap="butt"/>
+    <circle cx="512" cy="480" r="256" fill="none" stroke="#5bc8ff" stroke-width="112"
+      stroke-dasharray="402 1206" stroke-dashoffset="-804" stroke-linecap="butt"/>
+    <circle cx="512" cy="480" r="256" fill="none" stroke="#7c6ffd" stroke-width="112"
+      stroke-dasharray="402 1206" stroke-dashoffset="-1206" stroke-linecap="butt"/>
+
+    <!-- inner hole -->
+    <circle cx="512" cy="480" r="144" fill="url(#bg)"/>
+
+    <!-- Q tail -->
+    <line x1="634" y1="634" x2="756" y2="778" stroke="#3de6b0" stroke-width="112" stroke-linecap="round"/>
+  </g>
+</svg>
